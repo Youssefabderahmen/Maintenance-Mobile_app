@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#D3D3D3">
+
+    <!-- Left Arrow for Date Navigation -->
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/backaa"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Right Arrow for Date Navigation -->
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/backa"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Date Display -->
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/arrowLeft"
+        app:layout_constraintEnd_toStartOf="@id/arrowRight"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!-- Intervention Title -->
+
+    <!-- Company Name -->
+    <TextView
+        android:id="@+id/titleText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Intervention Mobile"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateText" />
+
+    <TextView
+        android:id="@+id/companyName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SONEDE"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/titleText1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Company Address -->
+    <TextView
+        android:id="@+id/companyAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rue de Paradis 75010 Paris"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/companyName1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Time Slot -->
+    <TextView
+        android:id="@+id/timeSlot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15.00 - 18.00"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/companyAddress1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Checkbox for Intervention -->
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/timeSlot1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Button to Check Intervention -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="@color/black"
+        android:text="Check I'ntervention"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeSlot1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
